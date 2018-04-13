@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+/* Create two unequal columns that floats next to each other */
+.content {
+    float: left;
+    padding: 10px;
+}
+
+.table {
+  width: 50%;
+}
+
+.chart {
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.summary:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+</style>
+</head>
+<body>
+
+<h2>Two Unequal Columns</h2>
+
+<div class="summary">
+  <div class="content table"">
+    <h2>Resumo</h2>
+    <TR>
+      <TD>Prof. Avaliaram</TD>
+      <TD>{{ professores_q_avaliaram }}</TD>
+      <TD>&nbsp;</TD>
+    </TR>
+    <TR>
+      <TD>Prof. que não avaliaram</TD>
+      <TD>{{ professores_q_nao_avaliaram }}</TD>
+      <TD>&nbsp;</TD>
+    </TR>
+  </div>
+  <div class="content chart"">
+    <img src="data:image/png;base64,{{ chart }}" align="right"\>
+  </div>
+</div>
+
+</body>
+</html>
