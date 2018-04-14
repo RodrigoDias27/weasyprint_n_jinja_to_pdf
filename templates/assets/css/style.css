@@ -88,9 +88,22 @@ dd          { margin-left: 1.5em;}
 	on table cells has to be 27px, instead of the standard 18px or 36px 
 	of other elements. 
  */ 
-table       { margin-bottom: 1.4em; width:100%; }
-th          { font-weight: bold; }
-th,td,caption { padding: 4px 10px 4px 5px; }
+table       { margin-bottom: 1.4em; width:100%; border-collapse: collapse;}
+th          { font-weight: bold; border-bottom: #808080 1px solid;}
+th, td, caption { border-bottom: #d9d9d9 1px solid; padding: 4px 10px 4px 5px; }
+
+.table0 { 
+  margin-bottom: 1.4em; 
+  width:100%; 
+  border-collapse: collapse; 
+  margin-top: 13px; 
+  font: 16px 'Calibri'; 
+  border-spacing: 0; 
+  background-color: white;
+  border: none;}
+.table0 th { border: none; font-weight: bold; padding: 0px 0px 0px 0px; }
+.table0 td { border: none; padding: 0px 0px 0px 0px; }
+.table0 caption { border: none; padding: 0px 0px 0px 0px; }
 /*
 	You can zebra-stripe your tables in outdated browsers by adding 
 	the class "even" to every other table row. 

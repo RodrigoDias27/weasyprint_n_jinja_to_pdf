@@ -11,76 +11,60 @@
 {% include 'header.html' %}
 
 <div class='header_former'>
-  <table cellpadding=0 cellspacing=0 class="t0">
+  <table class="table0">
     <tr>
-        <TD class="former_border"><P class="p5 ft9"><strong>Formador:</strong> {{ formadora }}</P></td>
-        <td class="former_border"><P class="p6 ft9"><strong>Email:</strong> {{ email_formadora }}</P></td>
+        <TD><P class="former_border p5 ft9"><strong>Formador:</strong> {{ formadora }}</P></td>
+        <td><P class="former_border p6 ft9"><strong>Email:</strong> {{ email_formadora }}</P></td>
     </tr>
   </table>
 </div>
 
 <div class="summary">
-  <div class="content table"">
-    <TABLE cellpadding=0 cellspacing=0 class="t0">
+  <div class="content info"">
+    <TABLE border="0" class="table0">
       <TR>
-        <TD rowspan=2 class="tr8 td3"><P class="p5 ft9">Prof. Participantes</P></TD>
-        <TD rowspan=2 class="tr8 td4"><P class="p6 ft9">{{ professores_participantes }}</P></TD>
+        <TD><P class="td3 p5 ft9">Prof. Participantes</P></TD>
+        <TD><P class="td4 p6 ft9">{{ professores_participantes }}</P></TD>
       </TR>
       <TR>
-        <TD class="tr2 td2"><P class="p2 ft5">&nbsp;</P></TD>
+        <TD><P class="td5 p5 ft0">Prof. Avaliaram</P></TD>
+        <TD><P class="td6 p6 ft0">{{ professores_q_avaliaram }}</P></TD>
       </TR>
       <TR>
-        <TD class="tr3 td5"><P class="p5 ft0">Prof. Avaliaram</P></TD>
-        <TD class="tr3 td6"><P class="p6 ft0">{{ professores_q_avaliaram }}</P></TD>
-        <TD class="tr10 td2"><P class="p2 ft3">&nbsp;</P></TD>
+        <TD><P class="td5 p5 ft0">Avaliações Realizadas</P></TD>
+        <TD><P class="td6 p6 ft0">{{ avaliacoes_realizadas }}</P></TD>
       </TR>
       <TR>
-        <TD class="tr3 td5"><P class="p5 ft0">Avaliações Realizadas</P></TD>
-        <TD class="tr3 td6"><P class="p6 ft0">{{ avaliacoes_realizadas }}</P></TD>
-        <TD class="tr10 td2"><P class="p2 ft3">&nbsp;</P></TD>
+        <TD><P class="td3 p5 ft11">Prof. que não avaliaram</P></TD>
+        <TD><P class="td4 p6 ft11">{{ professores_q_nao_avaliaram }}</P></TD>
       </TR>
       <TR>
-        <TD class="tr10 td3"><P class="p5 ft11">Prof. que não avaliaram</P></TD>
-        <TD class="tr10 td4"><P class="p6 ft11">{{ professores_q_nao_avaliaram }}</P></TD>
-        <TD class="tr7 td2"><P class="p2 ft3">&nbsp;</P></TD>
+        <TD><P class="td5 p5 ft12">Prof. Acessaram</P></TD>
+        <TD><P class="td6 p6 ft12">{{ prof_acessaram }}</P></TD>
       </TR>
       <TR>
-        <TD class="tr11 td5"><P class="p5 ft12">Prof. Acessaram</P></TD>
-        <TD class="tr11 td6"><P class="p6 ft12">{{ prof_acessaram }}</P></TD>
-        <TD class="tr3 td2"><P class="p2 ft3">&nbsp;</P></TD>
+        <TD><P class="td3 p5 ft11">Prof. que não entraram</P></TD>
+        <TD><P class="td4 p6 ft11">{{ prof_q_n_entraram }}</P></TD>
       </TR>
       <TR>
-        <TD class="tr7 td3"><P class="p5 ft11">Prof. que não entraram</P></TD>
-        <TD class="tr7 td4"><P class="p6 ft11">{{ prof_q_n_entraram }}</P></TD>
+        <TD><P class="tr8 td0 p2 ft13">&nbsp;</P></TD>
+        <TD><P class="tr8 td1 p2 ft13">&nbsp;</P></TD>
       </TR>
       <TR>
-        <TD class="tr12 td0"><P class="p2 ft13">&nbsp;</P></TD>
-        <TD class="tr12 td1"><P class="p2 ft13">&nbsp;</P></TD>
+        <TD><P class="td3 p9 ft9">Meta</P></TD>
       </TR>
       <TR>
-        <TD class="tr0 td5"><P class="p2 ft3">&nbsp;</P></TD>
-        <TD class="tr0 td6"><P class="p2 ft3">&nbsp;</P></TD>
-        <TD class="tr13 td2"><P class="p2 ft3">&nbsp;</P></TD>
+        <TD><P class="former_border td5 p5 ft0">Prof. que avaliaram {{ meta_planos }} planos</P></TD>
+        <TD><P class="former_border td6 p6 ft0">{{ prof_ok }}</P></TD>
       </TR>
       <TR>
-        <TD class="tr10 td3"><P class="p9 ft9">Meta</P></TD>
-        <TD class="tr10 td4"><P class="p2 ft3">&nbsp;</P></TD>
-        <TD class="tr7 td2"><P class="p2 ft3">&nbsp;</P></TD>
-      </TR>
-      <TR>
-        <TD class="tr3 td5"><P class="p5 ft0">Prof. que avaliaram {{ meta_planos }} planos</P></TD>
-        <TD class="tr3 td6"><P class="p6 ft0">{{ prof_ok }}</P></TD>
-        <TD class="tr10 td2"><P class="p2 ft3">&nbsp;</P></TD>
-      </TR>
-      <TR>
-        <TD class="tr10 td3"><P class="p5 ft11">Prof. que avaliaram menos de {{ meta_planos }} planos</P></TD>
-        <TD class="tr10 td4"><P class="p6 ft11">{{ prof_n_ok }}</P></TD>
-        <TD class="tr7 td2"><P class="p2 ft3">&nbsp;</P></TD>
+        <TD><P class="td3 p5 ft11">Prof. que avaliaram menos de {{ meta_planos }} planos</P></TD>
+        <TD><P class="td4 p6 ft11">{{ prof_n_ok }}</P></TD>
       </TR>
       </TABLE>  
   </div>
-  <div class="content chart" vertical-align="center">
-    <span class="helper"></span><img src="data:image/png;base64,{{ chart }}"\>
+  <div class="content chart">
+    <img class="helper" src="data:image/png;base64,{{ chart }}"\>
   </div>
 </div>
 
