@@ -29,6 +29,50 @@
     vertical-align: middle;
 }
 
+@media screen {
+    div.report_name {
+         display: none; 
+    }
+}
+@media print {
+
+    h1 {
+      page-break-before: always;
+    }
+
+    h1, h2, h3, h4, h5 {
+        page-break-after: avoid;
+    }       
+            
+    figure {
+      page-break-inside: avoid;
+    }
+
+    div#footer {
+        position: fixed;
+        bottom: -0.8cm;
+        right: 0px;
+
+        text-transform:uppercase;
+        font: 12px 'Calibri';
+    }
+
+}
+
+@page {
+
+    @bottom-right {
+        content: "Page " counter(page) " of " counter(pages);
+        font: 12px 'Calibri';
+        text-transform: uppercase;
+        white-space: nowrap;
+        position: fixed;
+        right: 200px;}
+    
+}
+
+.former_border{border-top: #a6a6a6 1px solid;padding: 0px;margin: 0px;vertical-align: top;}
+
 .dclr {clear:both;float:none;height:1px;margin:0px;padding:0px;overflow:hidden;}
 
 .ft0{font: 16px 'Calibri';line-height: 19px;}

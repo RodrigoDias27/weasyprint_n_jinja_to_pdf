@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/summary.css">
+  <meta name=author content="Rodrigo">
+  <meta name=description content="some desc">
 </head>
 <body>
 
-<div id="header" class='container'>
-    <header>
-        <div class="row">
-            <table cellpadding=0 cellspacing=0 background-color=transparent class="t0">
-                <tbody>
-                    <tr>
-                        <td><P class="p5 ft9"><strong>Formador:</strong> {{ formadora }}</P></td>
-                        <td><P class="p6 ft9"><strong>Email:</strong> {{ email_formadora }}</P></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </header>
+{% include 'header.html' %}
+
+<div class='header_former'>
+  <table cellpadding=0 cellspacing=0 class="t0">
+    <tr>
+        <TD class="former_border"><P class="p5 ft9"><strong>Formador:</strong> {{ formadora }}</P></td>
+        <td class="former_border"><P class="p6 ft9"><strong>Email:</strong> {{ email_formadora }}</P></td>
+    </tr>
+  </table>
 </div>
 
 <div class="summary">
@@ -87,6 +86,8 @@
 
 <h2>Sales Report</h2>
   {{ sales_pivot }}
+
+{% include 'footer.html' %}
 
 </body>
 </html>
